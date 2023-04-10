@@ -24,11 +24,7 @@ export default function RootLayout({
       <body className={font.className}>
         
         <ClientOnly>
-          <Modal onClose={function (): void {
-            throw new Error('Function not implemented.');
-          } } onSubmit={function (): void {
-            throw new Error('Function not implemented.');
-          } } actionLabel={''} />
+          <Modal title="Hello World" isOpen />
           <Navbar/>
         </ClientOnly>
         
