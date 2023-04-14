@@ -118,6 +118,7 @@ const Modal: React.FC<ModalProps> = ({
                                 {body}
                             </div>
                             {/* FOOTER */}
+                          
                             <div className="flex flex-col gap-2 p-6">
                                 <div className="
                                 flex
@@ -125,6 +126,7 @@ const Modal: React.FC<ModalProps> = ({
                                 items-center
                                 gap-4
                                 w-full">
+                            
                                     {secondaryAction && secondaryActionLabel && (
                                         <Button 
                                             outline
@@ -141,11 +143,9 @@ const Modal: React.FC<ModalProps> = ({
                                         ></Button>
 
                                 </div>
-
+                                {footer}
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             </div>

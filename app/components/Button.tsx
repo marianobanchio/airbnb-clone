@@ -18,12 +18,16 @@ const Button: React.FC<ButtonProps> = (
     icon: Icon,}
 ) => {
     return ( 
-        <button className={`relative 
+        <button 
+            onClick={onClick}
+            disabled={disabled}
+            className={`relative 
                             disabled:opacity-70 
                             disabled:cursor-not-allowed 
                             rounded-lg hover:opacity-80 
                             transition 
                             w-full 
+                            mb-3
                             ${outline ? 'bg-white': 'bg-rose-500' } 
                             ${outline ? 'border-black': 'border-rose-500' } 
                             ${outline ? 'text-black': 'text-white' } 

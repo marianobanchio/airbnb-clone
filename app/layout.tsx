@@ -3,7 +3,9 @@ import { Nunito } from 'next/font/google';
 import './globals.css'
 import Navbar from './components/navbar/Navbar';
 import ClientOnly from './components/ClientOnly';
-import Modal from './components/modals/Modal';
+import RegisterModal from './components/modals/RegisterModal';
+import ToasterProvider from './providers/toasterProvider';
+import LoginModal from './components/modals/LoginModal';
 
 export const metadata = {
   title: 'Aribnb',
@@ -24,10 +26,12 @@ export default function RootLayout({
       <body className={font.className}>
         
         <ClientOnly>
-          <Modal actionLabel="Submit" secondaryActionLabel="Delete" title="Hello World" isOpen />
+          <ToasterProvider/>
+          <RegisterModal />
+          <LoginModal />
           <Navbar/>
         </ClientOnly>
-        
+        {children}
       </body>
     </html>
   )
